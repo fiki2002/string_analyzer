@@ -138,8 +138,8 @@ DELETE /strings/{string_value}
 
 1. Clone the repository:
 ```bash
-git clone <your-repo-url>
-cd <project-folder>
+git clone https://github.com/fiki2002/string_analyzer.git
+cd string_analyzer
 ```
 
 2. Install dependencies:
@@ -161,13 +161,13 @@ No additional dependencies required! The project uses Node.js built-in `crypto` 
 
 1. Start the server:
 ```bash
-node index.js
+node server.js
 ```
 
 Or if you want to use nodemon for development:
 ```bash
 npm install -g nodemon
-nodemon index.js
+nodemon server.js
 ```
 
 2. The server will start on `http://localhost:3000`
@@ -184,7 +184,7 @@ nodemon index.js
 
 To set a custom port:
 ```bash
-PORT=8080 node index.js
+PORT=8080 node server.js
 ```
 
 Or create a `.env` file:
@@ -196,7 +196,7 @@ PORT=8080
 
 ```
 .
-├── index.js              # Main application file with routes
+├── server.js              # Main application file with routes
 ├── stringAnalyzer.js     # String analysis logic
 ├── package.json          # Project dependencies
 └── README.md            # This file
@@ -250,7 +250,7 @@ This API can be deployed to:
 2. Connect your GitHub repo to Railway
 3. Railway will auto-detect Node.js and deploy
 4. Set environment variables if needed
-5. Your API will be live at `https://your-app.up.railway.app`
+5. Your API will be live at `https://stringanalyzer-production-e6e7.up.railway.app`
 
 ## Testing
 
@@ -294,5 +294,5 @@ This project is part of the HNG Backend Wizards Stage 1 Task.
 
 ## Submission
 
-- **API URL:** [Your deployed URL]
+- **API URL:** [[Here](https://stringanalyzer-production-e6e7.up.railway.app/)]
 - **Date:** October 2025
