@@ -11,8 +11,20 @@ app.use(express.json());
 const stringsDatabase = {};
 
 app.get('/', (req, res) => {
+        res.status(200).json({
+                message: "Welcome to the String Analyzer Service!",
+                status: "online",
+                total_strings_stored: Object.keys(stringsDatabase).length,
+                endpoints: {
+                        create_string: "POST /strings",
+                        get_string: "GET /strings/:stringValue",
+                        list_strings: "GET /strings",
+                        filter_natural_language: "GET /strings/filter-by-natural-language",
+                        delete_string: "DELETE /strings/:stringValue"
+                }
+        });
+});
 
-})
 
 app.post('/strings', (req, res) => {
         const { value } = req.body;
